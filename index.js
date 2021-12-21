@@ -550,53 +550,131 @@ function findWinner(avgDolphin,avgKoalas){
 console.log(findWinner(avgDolphin,avgKoalas))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
 //----------------- String Methods ------- //
 
 let text = "Everything will be fine!";
 let len = text.length;
 console.log("length: "+len)
 
-// Extract Methods
-// slice(start,end)
+// --- Extract Methods
 
-let firstPart = text.slice(10,15)
-console.log(firstPart)
+// 1) slice(start,end)
 
-let secondPart = text.slice(10)
-console.log(secondPart)
+let firstPart = text.slice(11,15);
+console.log(firstPart);// will
 
-let thirdPart = text.slice(-13,-9)
-console.log(thirdPart)
+let secondPart = text.slice(11);
+console.log(secondPart); // will be fine!
 
-// substring (start, end)
+let thirdPart = text.slice(-13,-9);
+console.log(thirdPart); // will
+
+// 2) substring (start, end)
 // does not accept negatie numbers
 
-let part =text.substring(10,15)
-console.log(part) 
+let part =text.substring(11,15);
+console.log(part);  // will
 
+// 3) substr(start, length)
 
+let substrPart = text.substr(11,4);
+console.log(substrPart) // will
 
-*/
+let substrPart2 = text.substr(-13,4);
+console.log(substrPart2) // will
+
+// --- Split
+
+// example 1
+let splittedPart = text.split(" ");
+console.log(splittedPart);
+
+//exaample 2
+let text2 ="Turkey, Germany, USA, France";
+
+let splittedPart2 = text2.split(",");
+console.log(splittedPart2);
+//console.log(splittedPart2[1])
+
+//exaample 3
+
+let splittedPart3 = text.split("");
+console.log(splittedPart3);
+
+// -- Replace
+
+let string = "Current euro currency, is 20,15";
+let splitIt = string.split(" ");
+console.log(splitIt);
+
+let currency = splitIt[splitIt.length-1];
+currency =currency.replace(",",".");
+console.log(currency);
+
+currency = Number(currency);
+console.log(currency);
+
+let string2 = "Welcome to World."
+let newString = string2.replace("World","Turkey")
+console.log(newString)
+
+// replaceAll
+let replacedStr = string.replace(",","."); //replace method only replace the first match value
+console.log(replacedStr)
+
+let replacedStr1 = string.replaceAll(",",".");
+console.log(replacedStr1)
+
+// --Trim
+let string3 = "   Welcome to World.   ";
+console.log(string3);
+
+let newString3 = string3.trim();
+console.log(newString3)
+
+// -- inculeds
+// returns true or false
+
+console.log(newString3.includes("World")); // true
+
+console.log(newString3.includes("box")); // false
+
+// -- indexof
+
+let srting4 = "All is well !";
+let ind = srting4.indexOf("l"); // frist "l"
+console.log(ind); // 1 
+
+let lastInd =srting4.lastIndexOf("l"); // last "l"
+console.log(lastInd); //10
+
+let ind1 = srting4.indexOf("l",5);
+console.log(ind1);
+
+let ind2 = srting4.indexOf("l",ind+1); // second "l"
+console.log(ind2);
+
+// --- Concat
+
+let s1 = "Hello ";
+let s2 = "World";
+let s3 = s1.concat(s2);
+console.log(s3);
+
+// --- charAt
+
+let char =s3.charAt(6);
+console.log(char);
+
+// --- toLowerCase and toUpperCase
+
+let text12= "hello world";
+
+let text13 = text12.toUpperCase();
+console.log(text13);
+
+let text14 =text13.toLowerCase();
+console.log(text14);
 
 
 
