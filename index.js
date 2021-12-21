@@ -128,10 +128,10 @@ x1 += 5;
 console.log("x1 = "+x1);
 
 let y1= 10;
-y1/2;
+y1/=2;
 console.log("y1 =", y1);
 
-y1*4;
+y1*=4;
 console.log("y1 =", y1);
 
 x1 +=y1;
@@ -172,7 +172,7 @@ console.log(betterSentence);
 console.log("I want to write this \n\
 on new line");
 
-console.log(`I want to write this \n\
+console.log(`I want to write this 
 on new line`);
 
 console.log("For github desktop.");
@@ -412,7 +412,7 @@ console.log("season: ", season)
 
 const val = undefined
 
-// const value = val ?? "Alex"
+// const value = val ?? "default value"
 
 console.log("values ", value)
 
@@ -420,7 +420,183 @@ console.log( 0 || "Alex")
 
 console.log("Alex" && undefined && 2 )
 
+//----------------- Functions ------- //
 
+// Piece of code that we can use multiple times
+
+function myFristFunction(){
+    console.log("Hello World");
+};
+
+myFristFunction(); // call, execute, , invoke
+myFristFunction();
+myFristFunction();
+
+// one parametre
+function juiceEXtractor(fruit){
+    const juice = `This is ${fruit} juice.`;
+    console.log(juice);
+};
+
+juiceEXtractor("apple");
+
+// two parametre
+function juiceEXtractor2(fruit, fruit2){
+    const juice1 = `This is ${fruit} and ${fruit2} juice.`;
+    console.log(juice1);
+};
+
+
+juiceEXtractor2("apple","banana");
+
+function juiceEXtractor3(fruit, fruit2){
+    const juice2 = `This is ${fruit} and ${fruit2} juice.`;
+    return juice2;
+};
+
+// console.log(juiceEXtractor3("apple","banana"));
+
+const myJuice=juiceEXtractor3("apple","orange");
+console.log(myJuice);
+
+// Function Decleration
+
+function calcAge (birthYear1){
+    const age= 2021 - birthYear1;
+    return age;
+};
+console.log(calcAge(1980));
+
+//
+function calcAge (birthYear1){
+
+    return 2021-birthYear1;
+};
+
+console.log(calcAge(1980));
+
+// Function Expression Code
+
+const addition = function(a,b){
+    return a+b;
+}
+
+const total1 =addition(1825, 2015);
+console.log(total1);
+
+// Arrow Function Code
+
+const calcAge2 = birthYear3 => 2021 - birthYear3;
+
+console.log(calcAge2(2000));
+
+
+const canDrive = birthYear4 => {
+    const age =2021 -birthYear4;
+    const allowed = 18 -age;
+    return `You can drive ${allowed} year later.`
+};
+
+const result = canDrive(2006);
+console.log(result);
+
+//
+
+function hipotenus (a,b){
+    const firstValue = exponentValues(a);
+    const secondValue = exponentValues(b);
+    const result = (firstValue+secondValue)**(0.5);
+    return result;
+};
+
+function exponentValues(value){
+    return value**2;
+};
+
+const hipoResult = hipotenus(7,24)
+
+/*
+Example
+ There are two gymnastics teams, Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
+ Your tasks:
+
+ 1. Write a function that calculates the average points of the teams.
+ 2. Write another function to compare the averages and return the winner of the play.
+
+ Data 1: Dolphins score: 96, 108 and 89. 
+         Koalas score:  88, 91 and 110
+ */
+
+function average(a,b,c){
+
+    return a+b+c/3;
+};
+
+const avgDolphin =average(96,108,89);
+console.log(avgDolphin);
+
+const avgKoalas = average(88,91,110);
+console.log(avgKoalas);
+
+function findWinner(avgDolphin,avgKoalas){
+    if(avgDolphin>avgKoalas){
+        return ` The winner is Dolphin`;
+    }
+    else{
+        return ` The winner is Koala`
+    }
+}
+
+console.log(findWinner(avgDolphin,avgKoalas))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+//----------------- String Methods ------- //
+
+let text = "Everything will be fine!";
+let len = text.length;
+console.log("length: "+len)
+
+// Extract Methods
+// slice(start,end)
+
+let firstPart = text.slice(10,15)
+console.log(firstPart)
+
+let secondPart = text.slice(10)
+console.log(secondPart)
+
+let thirdPart = text.slice(-13,-9)
+console.log(thirdPart)
+
+// substring (start, end)
+// does not accept negatie numbers
+
+let part =text.substring(10,15)
+console.log(part) 
+
+
+
+*/
 
 
 

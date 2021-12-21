@@ -61,6 +61,7 @@ if(avgDolphins3 > avgKoalas3 &&  avgDolphins3 >= 100){
 }
 
 //Questions 2
+
 /*
 Take inputs from the user (the day and the time)  and return output whether is open or closed.
 Open -> Monday to Friday, 10-21 
@@ -70,8 +71,9 @@ Close -> all weekend
 const day = prompt("Enter the day: ")
 const time = prompt ("Enter the time: ")
 
-/* Answer 1
 
+//Answer 1
+/*
 if (day != "Monday" && day != "Tuesday" && day!= "Wednesday" && day !="Thursday" && day != "Friday" && day != "Saturday" &&  day != "Sunday"){
     alert("Please enter valid day")
 }else {
@@ -83,23 +85,23 @@ if (day != "Monday" && day != "Tuesday" && day!= "Wednesday" && day !="Thursday"
 }
 */
 
+// Answer 2
 
-
-if (hour <=21 && hour >= 10) {
+if (time <=21 && time >= 10) {
     switch (day) {
-    case ("monday"):
+    case ("Monday"):
         console.log("OPEN!")
         break
-    case ("tuesday"):
+    case ("Tuesday"):
         console.log("OPEN!")
         break
-    case ("wednesday"):
+    case ("Wednesday"):
         console.log("OPEN!")
         break
-    case ("thursday"):
+    case ("Thursday"):
         console.log("OPEN!")
         break
-    case ("friday"):
+    case ("Friday"):
         console.log("OPEN!")
         break
     default:
@@ -111,14 +113,77 @@ else{
     console.log("CLOSED!")
 }
 
-
-/* Answer 3
-
-if(gun=="Monday" && time>=10 && time<=21)   { console.log("open")}
-else if(gun=="Tuesday" && time>=10 && time<=21)  { console.log("open")}
-else if(gun=="Wednesday" && time>=10 && time<=21){ console.log("open")}
-else if(gun=="Thursday" && time>=10 && time<=21) { console.log("open")}
-else if(gun=="Friday" && time>=10 && time<=21)   { console.log("open")}
-else                                             {console.log("close")} 
+// Answer 3
+/*
+if(day=="Monday" && time>=10 && time<=21)   
+{ console.log("open")}
+else if(day=="Tuesday" && time>=10 && time<=21)  
+{ console.log("open")}
+else if(day=="Wednesday" && time>=10 && time<=21)
+{ console.log("open")}
+else if(day=="Thursday" && time>=10 && time<=21) 
+{ console.log("open")}
+else if(day=="Friday" && time>=10 && time<=21)   
+{ console.log("open")}
+else                                             
+{console.log("close")} 
 
 */
+
+// Questions 3
+
+/*
+Find out if a given year is a “leap” year.
+In the Gregorian calendar, three criteria must be taken into account to identify leap years:
+--- The year must be evenly divisible by 4;
+--- If the year can also be evenly divided by 100, it is not a leap year; unless...
+--- The year is also evenly divisible by 400. Then it is a leap year.
+According to these rules, the years 2000 and 2400 are leap years, while 1800, 
+1900, 2100, 2200, 2300, and 2500 are not the leap years.
+Write a program that takes the year from user and gives output as “2020 is a leap year” or “2019 is not a leap year” .
+*/
+
+const year = prompt("Enter a year: ");
+
+function leapYear (year) {
+    if((year % 4 == 0 && year % 100 !=0) || year % 4 == 0)
+
+        return`${year} is a leap year`
+    else
+    {
+        return`${year} is not a leap year`
+    } 
+} 
+
+console.log(leapYear(year))
+
+
+// Questions 4
+
+/*
+1.Take a positive number from user,
+2. Write a function that check whether  the number is "Armstrong" or not.
+
+An n-digit number that is the sum of the nth powers of its digits is called an n-Armstrong number. Examples :
+371 =3 ** 3 + 7 ** 3 + 1 ** 3;
+9474 = 9 ** 4 + 4 ** 4 + 7 ** 4 + 4 ** 4;
+93084 = 9 ** 5 + 3 ** 5 + 0 ** 5 + 8 ** 5 + 4 **5.
+
+P.S:  consider the negative, decimal and any entries other than numeric values then display a warning message to the user.
+*/
+
+
+const number = prompt("Enter a three digit number: ");
+
+function isArmstrong (number){
+    const len = number.length;
+    const newNumber = number.split("");
+    console.log(newNumber)
+    console.log(len)
+
+    const sum = newNumber[0]**len+newNumber[1]**len+newNumber[2]**len;
+
+    return sum==number ? "is Armstrong" : "not Armstrong";
+}
+
+console.log(isArmstrong(number));
