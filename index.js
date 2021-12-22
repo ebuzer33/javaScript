@@ -790,6 +790,10 @@ console.log(sliced);
 console.log(studentArray);
 
 
+// ------- OBJECTS -------- //
+
+
+
 
 
 
