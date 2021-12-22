@@ -792,6 +792,88 @@ console.log(studentArray);
 
 // ------- OBJECTS -------- //
 
+const employeeArr = [
+    'Snow',
+    'John',
+    28,
+    'trainer'
+];
+
+// key-value pairs
+const empObj = {
+    firstName1:'John',
+    lastName1: 'Snow',
+    age1:28,
+    job1 : 'trainer'
+};
+
+console.log(empObj);
+
+// Dot Notation 
+
+console.log(empObj.firstName1);lastName;
+
+// Bracket Notation
+
+console.log(empObj['firstName1']);
+
+nameKey ="Name1";
+console.log(empObj['first'+nameKey]);
+console.log(empObj['last'+nameKey]);
+
+const val1= prompt("What do you want to know about John");
+//console.log(empObj.val1); // undefined
+console.log(empObj[val1]); 
+
+empObj[val1] ? console.log(empObj[val1]) : console.log('Wrong Request');
+
+// add element
+empObj.location = 'Germany';
+console.log(empObj);
+
+empObj['mail'] = "ayz@gmail.com";
+console.log(empObj);
+
+// add array
+empObj['language'] = ['English', 'Spanish', "Deutsch"];
+console.log(empObj)
+
+// add boolean
+empObj['driveLicense'] = true;
+console.log(empObj);
+
+// add function
+
+const empObj2 = {
+    firstName2:'Maria',
+    lastName2: 'Snow',
+    birthYear2:1990,
+    job2 : 'Teacher',
+
+    /*
+    calcAge2: function(birthYear2){
+        return 2021-birthYear2
+    }
+    */
+    
+    calcAge2: function(){
+        return 2021-this.birthYear2
+    }
+    
+};
+
+console.log(empObj2.calcAge2(1990));
+
+
+
+
+
+
+
+
+
+
+
 
 
 
