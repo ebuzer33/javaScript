@@ -858,12 +858,128 @@ const empObj2 = {
     
     calcAge2: function(){
         return 2021-this.birthYear2
-    }
-    
+    } 
+
 };
 
 console.log(empObj2.calcAge2(1990));
 
+// -------- Loops --------- //
+
+///// FOR
+
+console.log('push up 1')
+console.log('push up 2')
+console.log('push up 3')
+console.log('push up 4')
+console.log('push up 5')
+console.log('push up 6')
+console.log('push up 7')
+console.log('push up 8')
+console.log('push up 9')
+console.log('push up 10')
+
+for (let rep = 1; rep <=30; rep++) {
+    console.log(`push up ${rep}`)    
+}
+
+
+const array3=['data1','data2','data3','data4','data5']
+/*
+console.log(array3[0])
+console.log(array3[1])
+console.log(array3[2])
+console.log(array3[3])
+console.log(array3[4])
+*/
+
+for(let i = 0; i<array3.length; i++){
+    console.log(array3[i])
+}
+
+// continue
+
+let evenNumbers = []
+
+for (let i = 0; i < 100; i++) {
+    
+    if(i % 2 !=0) continue
+    evenNumbers.push(i)
+}
+
+console.log(evenNumbers);
+
+
+// break
+
+for (let i = 0; i < 100; i++) {
+    
+    if(i % 2 !=0) continue
+    if(i==50) break
+    evenNumbers.push(i)
+}
+
+console.log(evenNumbers);
+
+// Nested Loop
+
+for(let i=1; i<=3; i++){
+
+    console.log(`Exercise ${i}`)
+    for (let j = 1; j <=5; j++) {
+        console.log(`repeat ${j}`)   
+    }
+}
+
+// example
+
+const reverseArr=[]
+for (let i = 10; i >=0; i--) {
+    reverseArr.push(i)    
+}
+
+console.log(reverseArr)
+
+///// WHILE
+
+let rep =1;
+while(rep<=10){
+    console.log(`push up ${rep}`)
+    rep++
+}
+
+// example
+
+let dice =Math.trunc(Math.random() * 6)+1
+console.log("dice= ",dice)
+
+while (dice!=6) {
+    console.log(`You rolled ${dice}. Try again.`)
+    dice =Math.trunc(Math.random() * 6)+1
+}
+console.log(`You rolled ${dice}. Congratulations.`)
+
+
+//// Do While
+
+let number1 = 1
+let sum = 0
+
+do {
+    sum+=number1
+    number1++
+} while (number1<=10)
+
+console.log("The total is : "+sum)
+
+
+
+
+
+
+
+
+    
 
 
 
