@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="grandparent">
+        <div class="parent">
+            <div class="child">
+
+            </div>
+        </div>
+    </div>
+
+<button id="button" onclick='getElementById("button").style.backgroundColor="blue"'>Submit</button>
+
+<hr>
+
+<p id="dateText">If you want to see today's date, click the Date button.</p>
+<button id="dateBtn" onclick='getElementById("dateToday").innerText=Date()'>Date</button>
+<p id="dateToday"> </p>
+
+<hr>
+
+<button onclick="console.log('click')">Console</button>
+
+<hr>
+
+<button id="colorChangeBtn" onclick='colorChangeFunction()'>Button</button>
+
+<hr>
+
+<div class="square"></div>
+<button id="colorChangeBtn" onclick='divColorChangeFunction()'>Button</button>
+
+<hr>
+
+<button onclick='ColorChangeFunction1(this,"yellow","black")'>Button 1</button>
+<button onclick='ColorChangeFunction1(this,"red","white")'>Button 2</button>
+<button onclick='ColorChangeFunction1(this,"aqua","green")'>Button 3</button>
+
+<hr>
+
+<button id="btn">Add Event</button>
+<div class="square" id="square2"></div>
+
+<hr>
+
+<input type="text" id="input">
+
+<hr>
+
+<input type="text" id="input2">
+
+<hr>
+<div class="col-md-12">
+    <input
+    id="fullName"
+    class="form-control"
+    type="text"
+    name="name"
+    placeholder="FullName"
+    required
+    maxlength="30"
+    />
+</div>
+<span id="char-count"></span>
+<hr>
+<div class="col-md-12">
+    <select id="job-list" class="form-select mt-3" required>
+    <option selected disabled value="">Position</option>
+    <option value="Junior Dev.">Junior Web Developer</option>
+    <option value="Senior Dev.">Senior Web Developer</option>
+    <option value="Project Man.">Project Manager</option> 
+    </select>
+</div>
+<span id="changePosition"></span>
+    <script src="index.js"></script>
+</body>
+</html>
